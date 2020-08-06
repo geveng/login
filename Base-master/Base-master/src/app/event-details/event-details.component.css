@@ -1,0 +1,26 @@
+#update{
+    float: right;
+    position: relative;
+    bottom: 25px;
+    right: 30px;
+
+}
+
+#updatelink{
+    color: orange;
+}
+
+#delete{
+    float: right;
+    position: relative;
+    bottom: 25px;
+    right: 30px;
+}
+
+/*
+.title{
+    position: relative;
+    top: 20px;
+    
+}
+*/

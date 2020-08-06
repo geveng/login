@@ -1,0 +1,33 @@
+<div class="video-container">
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+</div>
+
+<div class="result2" *ngIf="qrResultString == 'JAMES LIM POK CHING, SFUL, 11/22/22'">
+    <p id="resultstring">ERROR</p>
+    <button class="close" (click)="clearResult()"></button>
+</div>
+
+<div class="result" *ngIf="qrResultString == 'MARY TAN HUI MIN ,VR for Safe Riding,11/2/20'">
+    <p id="resultstring">Dear {{ geut[0] }}, you have successfully registered for {{ geut[1] }} on {{ geut[2] }}</p>
+    <button class="close" (click)="clearResult()"></button>
+</div>
+
+<div class="result" *ngIf="qrResultString == 'RYAN OH TIAN GUAN ,RPA for National Youth Council,11/2/20'">
+    <p id="resultstring">Dear {{ geut[0] }}, you have successfully registered for {{ geut[1] }} on {{ geut[2] }}</p>
+    <button class="close" (click)="clearResult()"></button>
+</div>
+
+
+
+<!--
+
+<div class="results" *ngIf="qrResultString">
+    <div class="wrapper text-center">
+        <h4 class="card-title">
+            Result
+        </h4>
+        <p class="card-description">{{ qrResultString }}</p>
+    </div>
+    <button mat-icon-button (click)="clearResult()">&times;</button>
+</div>
+    -->

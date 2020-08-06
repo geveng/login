@@ -1,0 +1,214 @@
+<!--
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h2 class="title">{{currentEvent.eventName}}</h2>
+                    </div>
+                    <div class="content">
+
+                        <div class="category">
+                            <h3 style="color:black;">Event Details</h3>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event Description</p>{{currentEvent.eventDescription}}</h2>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event Date</p>{{currentEvent.eventDate}}</h2>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event Venue</p>{{currentEvent.eventVenue}}</h2>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event Start Time</p>{{currentEvent.eventStartTime}}</h2>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event End Time</p>{{currentEvent.eventEndTime}}</h2>
+                        </div>
+
+                        <div class="typo-line">
+                            <h2><p class="category">Event Coordinator</p>{{currentEvent.eventCoordinator}}</h2>
+                        </div>
+                        <div class="typo-line">
+                            <h2><p class="category">Event Organisation</p>{{currentEvent.eventOrganisation}}</h2>
+                        </div>
+                
+                        <div class="typo-line">
+                            <h4><p class="category">Event Contact Person</p>{{currentEvent.eventContactPerson}}</h4>
+                        </div>
+                        <div class="typo-line">
+                            <h5><p class="category">Event Contact Person HP</p>{{currentEvent.eventContactPersonHP}}</h5>
+                        </div>
+                        <div class="typo-line">
+                            <h6><p class="category">Event Contact Person Email</p>{{currentEvent.eventContactPersonEmail}}</h6>
+                        </div>
+                        <div class="typo-line">
+                            <p><span class="category">Paragraph</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+                        </div>
+                        <div class="typo-line">
+                            <p class="category">Quote</p>
+                            <blockquote>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+                                </p>
+                                <small>
+                                    Steve Jobs, CEO Apple
+                                </small>
+                            </blockquote>
+                        </div>
+
+                        <div class="typo-line">
+                            <p class="category">Muted Text</p>
+                            <p class="text-muted">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+                            </p>
+                        </div>
+                        <div class="typo-line">
+                            
+                            there are also "text-info", "text-success", "text-warning", "text-danger" clases for the text
+                            
+                            <p class="category">Coloured Text
+                            </p>
+                            <p class="text-primary">
+                                Text Primary - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+                            </p>
+                            <p class="text-info">
+                                Text Info - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+                            </p>
+                            <p class="text-success">
+                                Text Success - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+                            </p>
+                            <p class="text-warning">
+                                Text Warning - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+                            </p>
+                            <p class="text-danger">
+                                Text Danger - Light Bootstrap Table Heading and complex bootstrap dashboard you've ever seen on the internet.
+                            </p>
+                        </div>
+                        <div class="typo-line">
+                            <h2><p class="category">Small Tag</p>Header with small subtitle <br><small>".small" is a tag for the headers</small> </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="currentEvent">
+    <p>{{currentEvent.eventID}}</p>
+    <p>{{currentEvent.eventName}}</p>
+    <p>{{currentEvent.eventCoordinator}}</p>
+    <p>{{currentEvent.eventOrganisation}}</p>
+    <p>{{currentEvent.eventDescription}}</p>
+    <p>{{currentEvent.eventContactPerson}}</p>
+    <p>{{currentEvent.eventContactPersonHP}}</p>
+    <p>{{currentEvent.eventContactPersonEmail}}</p>
+    <p>{{currentEvent.eventDate}}</p>
+    <p>{{currentEvent.eventVenue}}</p>
+    <p>{{currentEvent.eventStartTime}}</p>
+    <p>{{currentEvent.eventEndTime}}</p>
+    
+</div>
+-->
+
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">{{currentEvent.eventName}}</h4>
+                        <button id="delete" class="btn btn-danger" (click)="deleteEvent()">Delete Event</button>
+                        <button id="update" class="btn btn-warning"><a id = "updatelink" href="/#/events/{{ currentEvent.eventID }}/update">Update Event</a></button>
+                        
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <label>Event Description</label>
+                                    <p>{{currentEvent.eventDescription}}</p>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                         <div class="row">
+                                <div class="col-md-3">
+                                        <label>Event Venue</label>
+                                        <p>{{currentEvent.eventVenue}}</p>
+                                       
+                                    
+                                </div>                            
+                                <div class="col-md-3">
+                               
+                                        <label>Event Date</label>
+                                        <p>{{currentEvent.eventDate}}</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    
+                                        <label>Start Time</label>
+                                        <p>{{currentEvent.eventStartTime}}</p>
+                                </div>
+                                <div class="col-md-3">
+                                    
+                                        <label>End Time</label>
+                                        <p>{{currentEvent.eventEndTime}}</p>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-3">
+                                    
+                                        <label>Event Coordinator</label>
+                                        <p>{{currentEvent.eventCoordinator}}</p>
+                                   
+                                </div>
+                                <div class="col-md-3">
+                                   
+                                        <label>Event Organisation</label>
+                                        <p>{{currentEvent.eventOrganisation}}</p>
+                                    
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col-md-3">
+                          
+                                        <label>Contact Person</label>
+                                        <p>{{currentEvent.eventContactPerson}}</p>
+                                   
+                                </div>
+                                <div class="col-md-3">
+       
+                                        <label>Contact Person Hp</label>
+                                        <p>{{currentEvent.eventContactPersonHP}}</p>
+                                
+                                </div>
+                                <div class="col-md-3">
+       
+                                        <label>Contact Person Email</label>
+                                        <p>{{currentEvent.eventContactPersonEmail}}</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   
+
